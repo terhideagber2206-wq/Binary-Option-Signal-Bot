@@ -1,0 +1,14 @@
+{
+  "name": "binary-signal-telegram-bot",
+  "version": "1.0.0",
+  "description": "EMA cross + RSI + Bollinger signal bot (Node.js)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "technicalindicators": "^3.1.0"
+  },
+  "engines": { "node": ">=18" }
+}
