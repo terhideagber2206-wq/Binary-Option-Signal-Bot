@@ -1,14 +1,15 @@
 {
-  "name": "binary-signal-telegram-bot",
+  "name": "binary-options-telegram-bot",
   "version": "1.0.0",
-  "description": "EMA cross + RSI + Bollinger signal bot (Node.js)",
+  "description": "Telegram bot that provides binary options trading signals using technical indicators.",
   "main": "server.js",
-  "scripts": { "start": "node server.js" },
-  "dependencies": {
-    "axios": "^1.7.2",
-    "express": "^4.19.2",
-    "node-telegram-bot-api": "^0.66.0",
-    "technicalindicators": "^3.1.0"
+  "scripts": {
+    "start": "node server.js"
   },
-  "engines": { "node": ">=18" }
+  "dependencies": {
+    "axios": "^1.6.7",
+    "express": "^4.19.2",
+    "node-telegram-bot-api": "^0.64.0",
+    "technicalindicators": "^3.1.0"
+  }
 }
