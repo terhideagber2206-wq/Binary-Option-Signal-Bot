@@ -36,11 +36,10 @@ bot.onText(/^\/status$/, (msg) => {
     msg.chat.id,
     📊 Symbols: ${SYMBOLS.join(", ")}\n +
     ⏱️ Interval: ${INTERVAL}\n +
-    🔁 Scan: ${SCAN_EVERY_MS/1000}s\n +
+    🔁 Scan: ${SCAN_EVERY_MS / 1000}s\n +
     ⚙️ Strategy: EMA(9/21) cross + RSI(14) + Bollinger filter
   );
 });
-
 bot.onText(/^\/subscribe$/, (msg) => {
   subscribers.add(msg.chat.id);
   bot.sendMessage(msg.chat.id, "✅ Subscribed. You’ll receive signals when they trigger.");
