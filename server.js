@@ -31,15 +31,13 @@ const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 const subscribers = new Set();
 
 // ==== Commands ====
-bot.onText(/^\/start$/, (msg) => {
+bot.onText(/^\/status$/, (msg) => {
   bot.sendMessage(
     msg.chat.id,
-    "👋 I send experimental CALL/PUT signals (EMA9/21 + RSI14 + Bollinger filter).\n" +
-    "Commands:\n" +
-    "• /subscribe – start receiving signals\n" +
-    "• /unsubscribe – stop receiving\n" +
-    "• /status – show current config\n\n" +
-    "⚠️ Not financial advice. Paper trade first."
+    📊 Symbols: ${SYMBOLS.join(", ")}\n +
+    ⏱️ Interval: ${INTERVAL}\n +
+    🔁 Scan: ${SCAN_EVERY_MS/1000}s\n +
+    ⚙️ Strategy: EMA(9/21) cross + RSI(14) + Bollinger filter
   );
 });
 
